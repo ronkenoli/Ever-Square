@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ever Square</title>
+        <meta name="description" content="">
+        
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap -->
+    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            .col-md-6,
+            .col-md-4,
+            .col-md-3
+            {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <article class="square-box" style="background:url(https://dummyimage.com/800.png/1665aa/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-6">
+                    <article class="square-box" style="background:url(https://dummyimage.com/800.png/4f9bdd/fff) no-repeat center center /cover;"></article>
+                </div>
+                
+                <div class="col-md-4">
+                    <article class="square-box" style="background:url(https://dummyimage.com/500.png/5e3d5a/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="square-box" style="background:url(https://dummyimage.com/500.png/7c5778/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="square-box" style="background:url(https://dummyimage.com/500.png/b45da9/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-3">
+                    <article class="square-box" style="background:url(https://dummyimage.com/350.png/4ed3e4/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-3">
+                    <article class="square-box" style="background:url(https://dummyimage.com/350.png/3facba/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-3">
+                    <article class="square-box" style="background:url(https://dummyimage.com/350.png/2c8e9b/fff) no-repeat center center /cover;"></article>
+                </div>
+
+                <div class="col-md-3">
+                    <article class="square-box" style="background:url(https://dummyimage.com/350.png/196771/fff) no-repeat center center /cover;"></article>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+            /*
+             * Ever Square
+             * Author - Marcelo Ronkenoli /  Maycon Douglas
+             * v 0.1
+             */
+
+            function everSquare() {
+                $(".square-box").each(function(){
+                    var $self = $(this);
+                    $self.height($self.width());
+                });
+            };
+
+            $(window).load(function() {
+                everSquare();
+            });
+
+            $(window).resize(function() {
+                everSquare();
+            });
+        </script>
+        
+    </body>
+</html>
